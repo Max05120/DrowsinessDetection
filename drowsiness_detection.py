@@ -9,15 +9,15 @@ from pygame import mixer
 mixer.init()
 sound = mixer.Sound('alarm.wav')
 
-face = cv2.CascadeClassifier('/home/max/Downloads/dd/haar_cascade_files/haarcascade_frontalface_default.xml')
-leye = cv2.CascadeClassifier('/home/max/Downloads/dd/haar_cascade_files/haarcascade_lefteye_2splits.xml')
-reye = cv2.CascadeClassifier('/home/max/Downloads/dd/haar_cascade_files/haarcascade_righteye_2splits.xml')
+face = cv2.CascadeClassifier('PATH TO /haarcascade_frontalface_default.xml')
+leye = cv2.CascadeClassifier('PATH TO/haarcascade_lefteye_2splits.xml')
+reye = cv2.CascadeClassifier('PATH TO/haarcascade_righteye_2splits.xml')
 
 
 
 lbl=['Close','Open']
 
-model = load_model('/home/max/Downloads/dd/models/cnnCat3.h5')
+model = load_model('PATH TO/models/cnnCat3.h5')
 model.summary()
 path = os.getcwd()
 cap = cv2.VideoCapture(0)
